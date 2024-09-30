@@ -40,5 +40,15 @@ namespace School_Sagdieva.Pages
         {
 
         }
+
+        private void EditBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

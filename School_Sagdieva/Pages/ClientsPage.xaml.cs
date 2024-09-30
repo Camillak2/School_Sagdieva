@@ -1,4 +1,5 @@
-﻿using System;
+﻿using School_Sagdieva.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,28 @@ namespace School_Sagdieva.Pages
     /// </summary>
     public partial class ClientsPage : Page
     {
+        public static List<Client> clients { get; set; }
+
         public ClientsPage()
         {
             InitializeComponent();
+            clients = DBConnection.se.Client.ToList();
+            ClientsLV.ItemsSource = clients;
+        }
+
+        private void ClientsLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void EditBTN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteBTN_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -62,48 +62,81 @@
                                 HorizontalAlignment="Center"
                                        Stroke="DarkSlateBlue"
                                        StrokeThickness="2"/>
-                            <Image Stretch="Fill"
+                            <StackPanel Orientation="Horizontal">
+                                <Image Stretch="Fill"
                                 Source="{Binding MainImagePath}"
                                 Width="90"
                                 Height="90"
                                 HorizontalAlignment="Left"
                                 VerticalAlignment="Center"
                                 Margin="10"/>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Title}"
-                                       HorizontalAlignment="Center"
+                                <StackPanel HorizontalAlignment="Left">
+                                    <TextBlock Text="{Binding Title}"
+                                       HorizontalAlignment="Left"
                                        VerticalAlignment="Center"
                                         Foreground="DarkSlateBlue"
                                         TextWrapping="Wrap"
                                         TextAlignment="Left"
-                                        FontSize="30"/>
-                                <TextBlock Text="{Binding Cost}"
-                                       HorizontalAlignment="Center"
+                                        FontSize="25"
+                                        Height="80"
+                                        Width="480"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Cost}"
+                                       HorizontalAlignment="Left"
                                        VerticalAlignment="Center"
                                         Foreground="DarkSlateBlue"
                                         TextWrapping="Wrap"
                                         TextAlignment="Left"
                                         FontSize="15"/>
-                                <TextBlock Text="{Binding DurationInSeconds}"
-                                       HorizontalAlignment="Center"
+                                        <TextBlock Text=" рублей за "
+                                       HorizontalAlignment="Left"
                                        VerticalAlignment="Center"
                                         Foreground="DarkSlateBlue"
                                         TextWrapping="Wrap"
                                         TextAlignment="Left"
                                         FontSize="15"/>
+                                        <TextBlock Text="{Binding DurationInSeconds}"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                        Foreground="DarkSlateBlue"
+                                        TextWrapping="Wrap"
+                                        TextAlignment="Left"
+                                        FontSize="15"/>
+                                        <TextBlock Text=" секунд."
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                        Foreground="DarkSlateBlue"
+                                        TextWrapping="Wrap"
+                                        TextAlignment="Left"
+                                        FontSize="15"/>
+                                    </StackPanel>
+                                </StackPanel>
                             </StackPanel>
+                            
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
 
-        <Button Grid.Column="1" Style="{StaticResource Button1}"
+        <Button x:Name="EditBTN"
+            Grid.Column="1"
+                Style="{StaticResource Button1}"
                 Grid.Row="1"
-                Margin="0 0 0 30"
+                Margin="0 0 300 0"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center" Click="Button_Click">
-            <TextBlock Text="Войти"/>
+                HorizontalAlignment="Center" Click="EditBTN_Click">
+            <TextBlock Text="Редактировать"/>
+        </Button>
+
+        <Button x:Name="DeleteBTN"
+            Grid.Column="1"
+                Style="{StaticResource Button1}"
+                Grid.Row="1"
+                Margin="300 0 0 0"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" Click="DeleteBTN_Click">
+            <TextBlock Text="Удалить"/>
         </Button>
     </Grid>
 </Page>
