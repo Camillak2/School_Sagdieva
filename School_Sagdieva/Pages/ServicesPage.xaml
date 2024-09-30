@@ -1,0 +1,109 @@
+﻿<Page x:Class="School_Sagdieva.Pages.ServicesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:School_Sagdieva.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="690"
+      Title="ServicesPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource ResourceKey=Title}"
+            Text="Услуги"
+                   Margin="0 5"
+                   FontSize="30"/>
+            <ListView Grid.Row="0"
+                  Height="300"
+                  VerticalAlignment="Bottom"
+                  Margin="0 0 0 5"
+                  Width="650"
+                  ItemsSource="{Binding Service}"
+                  d:ItemsSource="{d:SampleData ItemCount=1}"
+                  x:Name="ServicesLV"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.CanContentScroll="False"
+                      Background="{x:Null}"
+                      BorderBrush="{x:Null}"
+                      Foreground="{x:Null}"
+                      SelectionChanged="ServicesLV_SelectionChanged">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"
+                               VerticalAlignment="Top"
+                                   Width="610"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="120"
+                              Width="600"
+                            Margin="0 0 0 10"
+                              HorizontalAlignment="Center">
+                            <Rectangle Fill="LightCyan"
+                                VerticalAlignment="Center"
+                                Width="600"
+                                Height="120"
+                                RadiusX="20"
+                                RadiusY="20"
+                                HorizontalAlignment="Center"
+                                       Stroke="DarkSlateBlue"
+                                       StrokeThickness="2"/>
+                            <Image Stretch="Fill"
+                                Source="{Binding MainImagePath}"
+                                Width="90"
+                                Height="90"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10"/>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Title}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                        Foreground="DarkSlateBlue"
+                                        TextWrapping="Wrap"
+                                        TextAlignment="Left"
+                                        FontSize="30"/>
+                                <TextBlock Text="{Binding Cost}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                        Foreground="DarkSlateBlue"
+                                        TextWrapping="Wrap"
+                                        TextAlignment="Left"
+                                        FontSize="15"/>
+                                <TextBlock Text="{Binding DurationInSeconds}"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                        Foreground="DarkSlateBlue"
+                                        TextWrapping="Wrap"
+                                        TextAlignment="Left"
+                                        FontSize="15"/>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <Button Grid.Column="1" Style="{StaticResource Button1}"
+                Grid.Row="1"
+                Margin="0 0 0 30"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" Click="Button_Click">
+            <TextBlock Text="Войти"/>
+        </Button>
+    </Grid>
+</Page>

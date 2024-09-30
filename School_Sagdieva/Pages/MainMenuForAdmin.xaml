@@ -1,0 +1,92 @@
+﻿<Page x:Class="School_Sagdieva.Pages.MainMenuForAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:School_Sagdieva.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="900"
+      Title="MainMenuForAdmin">
+
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    Margin="0 10 0 0"
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    Orientation="Vertical">
+            <Button Width="150"
+                    Height="90"
+                    Style="{StaticResource Button2}"
+                    x:Name="ServicesBTN" Click="ServicesBTN_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Images/Service.png"
+                           Height="50"/>
+                    <TextBlock Style="{StaticResource forButton}"
+                        Text="Услуги"
+                        FontSize="20"/>
+                </StackPanel>
+            </Button>
+            
+            <Button Width="150"
+                    Height="90"
+                    Style="{StaticResource Button2}"
+                    x:Name="ClientsBTN"
+                    Margin="0 10 0 0" Click="ClientsBTN_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Images/Client.png"
+                           Height="50"/>
+                    <TextBlock Style="{StaticResource forButton}"
+                        Text="Клиенты"
+                        FontSize="20"/>
+                </StackPanel>
+            </Button>
+
+            <Button Width="150"
+                    Height="90"
+                    Style="{StaticResource Button2}"
+                    x:Name="RecordsBTN"
+                    Margin="0 10 0 0" Click="RecordsBTN_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Images/Record.png"
+                           Height="50"/>
+                    <TextBlock Style="{StaticResource forButton}"
+                        Text="Записи"
+                        FontSize="20"/>
+                </StackPanel>
+            </Button>
+
+            <Button Width="150"
+                    Height="90"
+                    Style="{StaticResource Button2}"
+                    x:Name="ExitBTN"
+                    Margin="0 50 0 0" Click="ExitBTN_Click">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Images/Exit.png"
+                           Height="50"/>
+                    <TextBlock Style="{StaticResource forButton}"
+                        Text="Выход"
+                        FontSize="20"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <Grid Grid.Row="0"
+              Grid.RowSpan="2"
+              Grid.Column="0"
+              Width="680"
+              Height="450"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+            <Frame x:Name="NaFr"/>
+        </Grid>
+
+    </Grid>
+</Page>
