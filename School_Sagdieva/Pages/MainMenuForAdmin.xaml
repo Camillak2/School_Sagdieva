@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:School_Sagdieva.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="900"
+      d:DesignHeight="960" d:DesignWidth="1550"
       Title="MainMenuForAdmin">
 
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -19,74 +19,74 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0"
-                    Margin="0 10 0 0"
                     Grid.RowSpan="2"
                     Grid.Column="1"
                     Orientation="Vertical">
-            <Button Width="150"
-                    Height="90"
+            <Button Width="250"
+                    Height="110"
                     Style="{StaticResource Button2}"
-                    x:Name="ServicesBTN" Click="ServicesBTN_Click">
+                    x:Name="ServicesBTN"
+                    Margin="0 40 0 0"
+                    Click="ServicesBTN_Click">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Images/Service.png"
                            Height="50"/>
                     <TextBlock Style="{StaticResource forButton}"
                         Text="Услуги"
-                        FontSize="20"/>
+                        FontSize="30"/>
                 </StackPanel>
             </Button>
             
-            <Button Width="150"
-                    Height="90"
+            <Button Width="250"
+                    Height="110"
                     Style="{StaticResource Button2}"
                     x:Name="ClientsBTN"
-                    Margin="0 10 0 0" Click="ClientsBTN_Click">
+                    Margin="0 20 0 0" Click="ClientsBTN_Click">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Images/Client.png"
                            Height="50"/>
                     <TextBlock Style="{StaticResource forButton}"
                         Text="Клиенты"
-                        FontSize="20"/>
+                        FontSize="30"/>
                 </StackPanel>
             </Button>
 
-            <Button Width="150"
-                    Height="90"
+            <Button Width="250"
+                    Height="110"
                     Style="{StaticResource Button2}"
                     x:Name="RecordsBTN"
-                    Margin="0 10 0 0" Click="RecordsBTN_Click">
+                    Margin="0 20 0 0" Click="RecordsBTN_Click">
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Images/Record.png"
                            Height="50"/>
                     <TextBlock Style="{StaticResource forButton}"
                         Text="Записи"
-                        FontSize="20"/>
+                        FontSize="30"/>
                 </StackPanel>
             </Button>
 
-            <Button Width="150"
-                    Height="90"
+            <Button Width="250"
+                    Height="110"
                     Style="{StaticResource Button2}"
                     x:Name="ExitBTN"
-                    Margin="0 50 0 0" Click="ExitBTN_Click">
+                    Margin="0 390 0 0" Click="ExitBTN_Click" >
                 <StackPanel Orientation="Vertical">
                     <Image Source="/Images/Exit.png"
                            Height="50"/>
                     <TextBlock Style="{StaticResource forButton}"
                         Text="Выход"
-                        FontSize="20"/>
+                        FontSize="30"/>
                 </StackPanel>
             </Button>
         </StackPanel>
         <Grid Grid.Row="0"
               Grid.RowSpan="2"
               Grid.Column="0"
-              Width="680"
-              Height="450"
+              Width="1250"
+              Height="960"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
             <Frame x:Name="NaFr"/>
         </Grid>
-
     </Grid>
 </Page>

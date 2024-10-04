@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:School_Sagdieva.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="900"
+      d:DesignHeight="960" d:DesignWidth="1550"
       Title="AuthorizationPage">
 
     <Grid Background="AliceBlue">
@@ -20,40 +20,51 @@
 
         <Image Source="/Images/school_logo.png"
                Grid.RowSpan="2"
-               Width="300"/>
+               Width="500"
+               Height="500"/>
 
-        <TextBlock Style="{StaticResource ResourceKey=Title}"
-            Text="Learn School"
-                   Grid.Column="1"
-                   Grid.Row="0"
-                   VerticalAlignment="Top"
-                   Margin="0 30 0 0"/>
+        <Border Grid.Column="1"
+                Grid.Row="0"
+                BorderThickness="10"
+                BorderBrush="DarkSlateBlue"
+                Height="200"
+                VerticalAlignment="Top"
+                Margin="0 30 80 0"
+                Width="670"
+                CornerRadius="90"
+                Background="#7F04A0FF">
+            <TextBlock Style="{StaticResource ResourceKey=Title}"
+                Text="Learn School"/>
+        </Border>
 
         <TextBlock Style="{StaticResource ResourceKey=Title}"
             Text="Авторизация"
                    Grid.Column="1"
                    Grid.Row="0"
-                   FontSize="40"
-                   Margin="0 90 0 0"/>
+                   FontSize="90"
+                   Margin="0 180 80 0"/>
         <StackPanel  Grid.Column="1"
-                   Margin="0 0 0 0"
+                   Margin="0 0 80 0"
                    Grid.Row="1"
                    VerticalAlignment="Top"
                    HorizontalAlignment="Left"
                    Orientation="Horizontal">
             <TextBlock Style="{StaticResource ResourceKey=notTitle}"
                 Text="Логин"
-                       Margin="10 0 20 0"/>
+                       Margin="0 0 20 0"/>
             <TextBox Style="{StaticResource TextBox1}"
                 x:Name="LoginTB"
-                     Width="271"/>
+                     Width="510"/>
         </StackPanel>
 
-        <Button Grid.Column="1" Style="{StaticResource Button1}"
+        <Button Grid.Column="1"
+                Style="{StaticResource Button1}"
                 Grid.Row="1"
-                Margin="0 0 0 30"
+                Margin="0 0 80 30"
                 VerticalAlignment="Center"
-                HorizontalAlignment="Center" Click="Button_Click">
+                HorizontalAlignment="Center"
+                Click="Button_Click"
+                Width="400">
             <TextBlock Text="Войти"/>
         </Button>
     </Grid>

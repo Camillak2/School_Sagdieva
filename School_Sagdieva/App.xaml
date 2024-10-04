@@ -5,9 +5,8 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="TextBlock" x:Key="Title">
-            <Setter Property="Background" Value="AliceBlue"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="FontSize" Value="100"/>
             <Setter Property="Foreground" Value="DarkSlateBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -16,7 +15,7 @@
         <Style TargetType="TextBlock" x:Key="notTitle">
             <Setter Property="Background" Value="AliceBlue"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="50"/>
             <Setter Property="Foreground" Value="DarkSlateBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -25,27 +24,52 @@
         <Style TargetType="TextBox" x:Key="TextBox1">
             <Setter Property="Background" Value="AliceBlue"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="50"/>
             <Setter Property="Foreground" Value="DarkSlateBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
-            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderThickness" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="50">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <Style TargetType="Button" x:Key="Button1">
-            <Setter Property="Background" Value="AliceBlue"/>
+            <Setter Property="Background" Value="#7F04A0FF"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontSize" Value="90"/>
             <Setter Property="Foreground" Value="DarkSlateBlue"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
-            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderThickness" Value="8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <Style TargetType="Button" x:Key="Button2">
-            <Setter Property="Background" Value="LightCyan"/>
+            <Setter Property="Background" Value="#7F04A0FF"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
             <Setter Property="FontSize" Value="30"/>
             <Setter Property="Foreground" Value="DarkSlateBlue"/>
@@ -53,11 +77,23 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
             <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="50">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
 
         <Style TargetType="TextBlock" x:Key="forButton">
-            <Setter Property="Background" Value="LightCyan"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
             <Setter Property="FontSize" Value="30"/>
             <Setter Property="Foreground" Value="DarkSlateBlue"/>

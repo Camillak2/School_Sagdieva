@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Sagdieva"
         mc:Ignorable="d"
-        Title="Learn School" Height="500" Width="900"
+        Title="Learn School" Height="960" Width="1550"
         Icon="/Images/school_logo.png"
         WindowStartupLocation="CenterScreen"
-        WindowState="Normal">
+        WindowState="Maximized">
     <Grid Background="AliceBlue">
         <Frame x:Name="NaFr" NavigationUIVisibility="Hidden"/>
     </Grid>

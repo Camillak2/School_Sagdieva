@@ -8,7 +8,7 @@ namespace School_Sagdieva.DB
 {
     internal class DBConnection
     {
-        public static School_Entities se = new School_Entities();
+        public static School se = new School();
 
         public static Client loggedClient;
     }
